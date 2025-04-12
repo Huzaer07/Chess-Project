@@ -1,0 +1,109 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<StartupObject>ChessUI.App</StartupObject>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Pieces\AvailableMoves.png" />
+		<None Remove="Pieces\Blackbishop.png" />
+		<None Remove="Pieces\BlackKing.png" />
+		<None Remove="Pieces\BlackKnight.png" />
+		<None Remove="Pieces\BlackPawn.png" />
+		<None Remove="Pieces\BlackQueen.png" />
+		<None Remove="Pieces\BlackRook.png" />
+		<None Remove="Pieces\Board.png" />
+		<None Remove="Pieces\Icon.png" />
+		<None Remove="Pieces\WhiteBishop.png" />
+		<None Remove="Pieces\WhiteKing.png" />
+		<None Remove="Pieces\WhiteKnight.png" />
+		<None Remove="Pieces\WhitePawn.png" />
+		<None Remove="Pieces\WhiteQueen.png" />
+		<None Remove="Pieces\WhiteRook.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ChessLogic\ChessLogic.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Pieces\AvailableMoves.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\Blackbishop.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\BlackKing.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\BlackKnight.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\BlackPawn.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\BlackQueen.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\BlackRook.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\Board.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\Icon.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\WhiteBishop.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\WhiteKing.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\WhiteKnight.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\WhitePawn.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\WhiteQueen.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Pieces\WhiteRook.png">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Settings.Designer.cs">
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Properties\Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
+
+</Project>
